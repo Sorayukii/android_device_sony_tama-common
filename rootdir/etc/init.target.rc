@@ -65,7 +65,6 @@ on fs
     mount_all /vendor/etc/fstab.qcom
     chown root system /mnt/vendor/persist
     chmod 0771 /mnt/vendor/persist
-    swapon_all /vendor/etc/fstab.qcom
     restorecon_recursive /mnt/vendor/persist
     mkdir /mnt/vendor/persist/data 0700 system system
 
@@ -209,3 +208,7 @@ on property:init.svc.vendor.hwcomposer-2-3=running
 
 on property:init.svc.vendor.hwcomposer-2-3=restarting
     stop ppd
+
+on property:sys.boot_completed=1
+    # Enable ZRAM on boot_complete
+    swapon_all /vendor/etc/fstab.qcom
