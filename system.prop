@@ -42,3 +42,6 @@ ro.vendor.qti.va_aosp.support=1
 # Wireless display
 persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
+
+# RCS
+persist.rcs.supported=1
