@@ -136,6 +136,9 @@ on post-fs
     # Update dm-verity state and set partition.*.verified properties
     verity_update_state
 
+    # make the selinux kernel policy world-readable
+    chmod 0444 /sys/fs/selinux/policy
+
 on early-boot
     # ta_qmi_service use wakelock before on boot, so add permission here.
     chown radio wakelock /sys/power/wake_lock
