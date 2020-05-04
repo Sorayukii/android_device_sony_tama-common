@@ -168,9 +168,6 @@ on enable-low-power
     write /proc/sys/kernel/sched_group_downmigrate 95
     write /proc/sys/kernel/sched_walt_rotate_big_tasks 1
 
-    # Enable oom_reaper
-    write /sys/module/lowmemorykiller/parameters/oom_reaper 1
-
     # Enable bus-dcvs
     write /sys/class/devfreq/soc:qcom,cpubw/governor "bw_hwmon"
     write /sys/class/devfreq/soc:qcom,cpubw/polling_interval 50
@@ -262,9 +259,6 @@ on enable-low-power
     write /proc/sys/vm/watermark_scale_factor 120
     write /sys/module/process_reclaim/parameters/min_score_adj 606
     write /sys/module/process_reclaim/parameters/enable_process_reclaim 1
-
-    # Set LMK minfree
-    write /sys/module/lowmemorykiller/parameters/minfree "18432,23040,27648,32256,85296,120640"
 
     # Enable PowerHAL hint processing
     setprop vendor.powerhal.init 1
