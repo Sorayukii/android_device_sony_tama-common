@@ -122,7 +122,7 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 # FS-verity
 ro.apk_verity.mode=2
 
-# Graphics
+# Display
 debug.egl.hw=0
 debug.sf.hw=0
 ro.hardware.egl=adreno
@@ -135,6 +135,7 @@ ro.surface_flinger.has_wide_color_display=true
 ro.surface_flinger.has_HDR_display=true
 ro.surface_flinger.use_color_management=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
+debug.sf.disable_client_composition_cache=1
 
 # IMS
 persist.dbg.volte_avail_ovr=1
