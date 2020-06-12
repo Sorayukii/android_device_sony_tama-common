@@ -588,6 +588,9 @@ on post-fs-data
     start vendor.netmgrd
     start vendor.port-bridge
 
+    # Default enable uicc_se
+    setprop persist.vendor.radio.uicc_se_enabled true
+
     # Create dir for TUI
     mkdir /data/vendor/tui 0700 system drmrpc
 
