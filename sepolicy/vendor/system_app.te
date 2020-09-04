@@ -2,6 +2,9 @@
 allow system_app sysfs_zram:dir search;
 allow system_app sysfs_zram:file r_file_perms;
 
+# allow system app to read /proc/pagetypeinfo
+allow system_app proc_pagetypeinfo:file r_file_perms;
+
 dontaudit system_app {
   apex_service
   system_suspend_control_service
