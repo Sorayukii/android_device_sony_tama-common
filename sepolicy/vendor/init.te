@@ -8,3 +8,5 @@ allow init hal_fpc_fingerprint_socket:sock_file create_file_perms;
 allow init tad_socket:sock_file create_file_perms;
 
 allow init qns_data_file:dir mounton;
+
+allow init socket_device:sock_file { unlink setattr create };
