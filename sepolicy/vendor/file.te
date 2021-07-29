@@ -1,6 +1,9 @@
 # Audio
 type audio_hweffect_device, file_type;
 
+# files
+type blkio_file, file_type;
+
 # Camera
 type hal_camera_somc_socket, file_type;
 type sony_camera_device, file_type;
