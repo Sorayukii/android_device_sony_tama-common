@@ -156,6 +156,7 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    android.frameworks.sensorservice@1.0 \
     android.hardware.camera.common@1.0.vendor \
     android.hardware.camera.device@3.4.vendor \
     android.hardware.camera.provider@2.4.vendor \
