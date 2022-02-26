@@ -1563,3 +1563,7 @@ service kobjeventd /vendor/bin/hw/kobjeventd
     user system
     group system
     class main
+
+on property:persist.sys.device_provisioned=1
+    setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,6,7
+    setprop dalvik.vm.dex2oat-threads 6
