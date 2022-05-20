@@ -160,8 +160,12 @@ ro.vendor.audio.soundtrigger.vop.adsp.level=10
 ro.vendor.audio.soundtrigger.training.level=60
 ro.vendor.audio.soundtrigger.hist.duration=1500
 
+
 # Netflix custom property
 ro.netflix.bsp_rev=Q845-14477-1
+
+# Phantom process monitoring
+sys.fflag.override.settings_enable_monitor_phantom_procs=false
 
 # Radio
 ril.subscription.types=NV,RUIM
