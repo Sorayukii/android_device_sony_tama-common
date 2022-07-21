@@ -136,6 +136,7 @@ ro.surface_flinger.has_HDR_display=true
 ro.surface_flinger.use_color_management=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
 debug.sf.disable_client_composition_cache=1
+debug.sf.predict_hwc_composition_strategy=0
 
 # IMS
 persist.dbg.volte_avail_ovr=1
