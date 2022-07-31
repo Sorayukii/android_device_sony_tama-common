@@ -52,3 +52,6 @@ persist.rcs.supported=1
 
 # Disable Skia tracing by default
 debug.hwui.skia_atrace_enabled=false
+
+#Disable MTE Async for system server
+arm64.memtag.process.system_server=off
