@@ -1003,8 +1003,18 @@ vendor/lib64/unnhal-acc-common.so
 vendor/lib64/unnhal-acc-hvx.so
 
 # NFC
-vendor/bin/hw/android.hardware.nfc@1.2-service
-vendor/etc/init/android.hardware.nfc@1.2-service.rc
+etc/libnfc-nci.conf
+etc/felica/common.cfg
+etc/felica/mfm.cfg
+etc/felica/mfs.cfg
+vendor/bin/hw/android.hardware.nfc@1.1-service.cxd22xx
+vendor/etc/libnfc-cxd22xx.conf
+vendor/etc/libnfc-cxd-224x02010010.conf
+vendor/etc/libnfc-cxd-224x02310011.conf
+vendor/etc/nfc_settings.conf
+vendor/etc/init/android.hardware.nfc@1.1-service.cxd22xx.rc
+vendor/firmware/cxd224x_firmware_ES1.1.bin
+vendor/firmware/cxd224x_firmware_ES1.0.bin
 vendor/lib/ese_client.so
 vendor/lib/ese_spi_nxp.so
 vendor/lib/hal_libnfc.so
@@ -1015,7 +1025,6 @@ vendor/lib/vendor.nxp.nxpnfc@1.0.so
 vendor/lib64/ese_client.so
 vendor/lib64/ese_spi_nxp.so
 vendor/lib64/hal_libnfc.so
-vendor/lib64/libpn553_fw.so
 vendor/lib64/nfc_nci_nxp.so
 vendor/lib64/vendor.nxp.eventprocessor@1.0.so
 vendor/lib64/vendor.nxp.nxpese@1.0.so

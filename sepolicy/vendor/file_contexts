@@ -35,7 +35,9 @@
 /mnt/idd/startup-prober(/.*)?             u:object_r:startupprober_file:s0
 
 # NFC
-/dev/pn553                u:object_r:nfc_device:s0
+/(vendor|system/vendor)/bin/hw/android.hardware.nfc@1.1-service.cxd22xx       u:object_r:hal_nfc_default_exec:s0
+/dev/bd7602-i2c       u:object_r:nfc_device:s0
+/dev/cxd224x-i2c      u:object_r:nfc_device:s0
 
 # PERSIST
 /mnt/vendor/persist/credmgr/credmgr2.db     u:object_r:persist_credmgr_file:s0
