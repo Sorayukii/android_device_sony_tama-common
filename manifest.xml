@@ -110,7 +110,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl">
         <name>android.hardware.nfc</name>
         <transport>hwbinder</transport>
-        <fqname>@1.2::INfc/default</fqname>
+        <fqname>@1.1::INfc/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.radio</name>
@@ -190,11 +190,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <transport>hwbinder</transport>
         <fqname>@2.0::IDisplayModes/default</fqname>
         <fqname>@2.0::IPictureAdjustment/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.nxp.nxpnfc</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::INxpNfc/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.data.factory</name>
