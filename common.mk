@@ -326,12 +326,19 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    android.hardware.nfc-service.nxp \
+    android.hardware.nfc@1.1.vendor \
     com.android.nfc_extras \
     Tag
 
+# Secure Element
+PRODUCT_PACKAGES += \
+    android.hardware.secure_element@1.0.vendor
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/init.tama.nfc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.tama.nfc.rc
 
 # Power
 PRODUCT_PACKAGES += \
