@@ -27,7 +27,7 @@ ro.vendor.use_data_netmgrd=true
 dalvik.vm.dex2oat64.enabled=true
 
 # Graphics
-debug.sf.enable_hwc_vds=1
+debug.sf.enable_hwc_vds=0
 debug.sf.latch_unsignaled=1
 
 # Media
