@@ -7,6 +7,7 @@ get_prop(wvkbd, hwservicemanager_prop)
 get_prop(wvkbd, vendor_tee_listener_prop)
 
 binder_call(wvkbd, hal_secd_default)
+binder_call(wvkbd, hwservicemanager)
 
 allow wvkbd hal_secd_hwservice:hwservice_manager find;
 
