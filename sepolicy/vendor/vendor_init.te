@@ -28,3 +28,5 @@ set_prop(vendor_init, cust_system_prop)
 allow vendor_init sysfs_ssr_toggle:file w_file_perms;
 
 allow vendor_init self:capability kill;
+
+# Allow vendor_init to change watermark_scale_factor
