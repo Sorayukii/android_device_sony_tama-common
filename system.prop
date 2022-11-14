@@ -29,6 +29,7 @@ dalvik.vm.dex2oat64.enabled=true
 # Graphics
 debug.sf.enable_hwc_vds=0
 debug.sf.latch_unsignaled=1
+debug.sf.auto_latch_unsignaled=true
 sdm.debug.disable_inline_rotator=1
 vendor.display.disable_rotator_downscale=1
 sdm.debug.disable_inline_rotator_secure=1
