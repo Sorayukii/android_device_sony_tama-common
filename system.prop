@@ -49,3 +49,6 @@ persist.sys.wfd.virtual=0
 
 # RCS
 persist.rcs.supported=1
+
+# Disable Skia tracing by default
+debug.hwui.skia_atrace_enabled=false
