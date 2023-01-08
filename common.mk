@@ -381,9 +381,8 @@ PRODUCT_PACKAGES += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2.vendor \
-    android.hardware.power-service.sony-libperfmgr \
-    android.hardware.power.stats@1.0-service.mock
-
+    android.hardware.power-service.sony-libperfmgr
+    
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
