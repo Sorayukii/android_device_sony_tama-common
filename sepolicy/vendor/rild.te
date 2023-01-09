@@ -1,6 +1,9 @@
 # Allow rild to find hal_secd_hwservice
 allow rild hal_secd_hwservice:hwservice_manager find;
 
+allow rild diag_device:chr_file rw_file_perms;
+allow rild diag_device:chr_file { read write };
+
 # Allow rild to add hal_somc_radio_hwservice
 add_hwservice(rild, hal_somc_radio_hwservice)
 
