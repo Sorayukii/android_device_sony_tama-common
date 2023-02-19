@@ -25,6 +25,10 @@ ro.vendor.use_data_netmgrd=true
 
 # Dalvik
 dalvik.vm.dex2oat64.enabled=true
+dalvik.vm.image-dex2oat-filter=speed
+dalvik.vm.image-dex2oat-threads=8
+dalvik.vm.dex2oat-filter=speed
+dalvik.vm.dex2oat-threads=8
 
 # Graphics
 debug.sf.enable_hwc_vds=0
