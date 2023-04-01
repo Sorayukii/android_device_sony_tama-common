@@ -301,4 +301,8 @@
     <!-- Maximum color temperature, in Kelvin, supported by Night display.
          Setting this to track config_displayWhiteBalanceColorTemperatureDefault (currently 6500K). -->
     <integer name="config_nightDisplayColorTemperatureMax">6500</integer>
+
+    <!-- Feature flag to store TaskSnapshot in 16 bit pixel format to save memory. -->
+    <bool name="config_use16BitTaskSnapshotPixelFormat">true</bool>
+
 </resources>
