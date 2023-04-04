@@ -103,3 +103,8 @@ persist.log.tag.b/223498680=S
 persist.log.tag.TrafficStats=S
 persist.log.tag.ContrastColorUtil=S
 persist.log.tag.OpenGLRenderer=S
+
+# Radio
+ro.telephony.default_network=33,33
+ro.telephony.sim_slots.count=2
+telephony.active_modems.max_count=2
