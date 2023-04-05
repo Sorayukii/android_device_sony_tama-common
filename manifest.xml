@@ -513,8 +513,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>imsradio0</instance>
             <instance>imsradio1</instance>
         </interface>
-        <fqname>@1.5::IImsRadio/imsradio0</fqname>
-        <fqname>@1.5::IImsRadio/imsradio1</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.internal.deviceinfo</name>
@@ -535,8 +533,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>UimLpa0</instance>
             <instance>UimLpa1</instance>
         </interface>
-        <fqname>@1.0::IUimLpa/UimLpa0</fqname>
-        <fqname>@1.0::IUimLpa/UimLpa1</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.qcrilhook</name>
@@ -547,8 +543,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>oemhook0</instance>
             <instance>oemhook1</instance>
         </interface>
-        <fqname>@1.0::IQtiOemHook/oemhook0</fqname>
-        <fqname>@1.0::IQtiOemHook/oemhook1</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.qtiradio</name>
@@ -570,8 +564,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>Uim0</instance>
             <instance>Uim1</instance>
         </interface>
-        <fqname>@1.2::IUim/Uim0</fqname>
-        <fqname>@1.2::IUim/Uim1</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.uim_remote_client</name>
@@ -582,8 +574,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>uimRemoteClient0</instance>
             <instance>uimRemoteClient1</instance>
         </interface>
-        <fqname>@1.0::IUimRemoteServiceClient/uimRemoteClient0</fqname>
-        <fqname>@1.0::IUimRemoteServiceClient/uimRemoteClient1</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.uim_remote_server</name>
@@ -594,8 +584,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>uimRemoteServer0</instance>
             <instance>uimRemoteServer1</instance>
         </interface>
-        <fqname>@1.0::IUimRemoteServiceServer/uimRemoteServer0</fqname>
-        <fqname>@1.0::IUimRemoteServiceServer/uimRemoteServer1</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.sensorscalibrate</name>
