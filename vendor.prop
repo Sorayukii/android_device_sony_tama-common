@@ -99,6 +99,9 @@ persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
 ro.bluetooth.a2dp_offload.supported=true
 vendor.qcom.bluetooth.soc=cherokee
 
+# Camera
+persist.vendor.camera.logInfoMask=false
+
 # Chipset
 ro.soc.manufacturer=Qualcomm
 ro.soc.model=SDM845
