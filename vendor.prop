@@ -108,6 +108,7 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 
 # Display post-processing
 ro.vendor.display.cabl=2
+debug.sf.disable_backpressure=1
 
 # DPM
 persist.vendor.dpm.idletimer.mode=default
