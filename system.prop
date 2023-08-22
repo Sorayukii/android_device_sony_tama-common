@@ -55,6 +55,7 @@ ro.hwui.text_large_cache_height=1024
 
 # Media
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
+mm.enable.smoothstreaming=true
 
 # NFC
 ro.nfc.port=I2C
