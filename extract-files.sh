@@ -29,6 +29,12 @@ function blob_fixup() {
             sed -i "s/persist.radio.multisim.config/vendor.radio.multisim.config\x00/" "${2}"
             sed -i -r 's/persist\.somc\.cust\.modem(0|1)\x00/persist.vendor.somc.sim\1\x00/' "${2}"
             ;;
+        vendor/bin/pm-service)
+            grep -q libutils-v33.so "${2}" || "${PATCHELF}" --add-needed "libutils-v33.so" "${2}"
+            ;;
+        vendor/lib/camera/components/com.qti.node.watermark.so)
+            grep -q "libpiex_shim.so" "${2}" || ${PATCHELF} --add-needed "libpiex_shim.so" "${2}"
+            ;;
         vendor/etc/init/init.sony-modem-switcher.rc)
             sed -i "s/\/system\/bin\/sony-modem-switcher/\/vendor\/bin\/sony-modem-switcher/" "${2}"
             sed -i -r 's/persist\.somc\.cust\.modem(0|1)/persist.vendor.somc.sim\1/' "${2}"
