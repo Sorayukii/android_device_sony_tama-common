@@ -5,6 +5,10 @@ allow system_app sysfs_zram:file r_file_perms;
 allow system_app sysfs_battery_supply:dir { search };
 allow system_app sysfs_battery_supply:file { read open getattr };
 
+# To allow Settings to find and bind Google Battery HAL
+allow system_app hal_googlebattery_service:service_manager find;
+binder_call(system_app, hal_googlebattery)
+
 dontaudit system_app {
   apex_service
   system_suspend_control_service
