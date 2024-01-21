@@ -13,3 +13,6 @@ vendor.somc.hardware.miscta::IMisctaGlobal                        u:object_r:hal
 vendor.somc.hardware.modemswitcher::IModemSwitcher                                          u:object_r:hal_modemswitcher_hwservice:s0
 vendor.somc.hardware.radio::ISomcHook                             u:object_r:hal_somc_radio_hwservice:s0
 vendor.somc.hardware.swiqi::IHidlSwiqi                            u:object_r:hal_swiqi_hwservice:s0
+
+# Google
+vendor.google.wireless_charger::IWirelessCharger                                    u:object_r:hal_wlc_hwservice:s0
