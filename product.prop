@@ -17,3 +17,23 @@ ro.vold.umsdirtyratio=20
 ro.ril.disable.power.collapse=0
 power.saving.mode=1
 pm.sleep_mode=1
+
+# LMKD
+ro.lmk.kill_heaviest_task=true
+ro.lmk.use_new_strategy=true
+ro.lmk.enable_watermark_check=true
+ro.lmk.enable_userspace_lmk=true
+ro.lmk.enhance_batch_kill=false
+ro.lmk.super_critical=701
+ro.lmk.filecache_min_kb=153600
+ro.lmk.kill_timeout_ms=50
+ro.lmk.stall_limit_critical=40
+ro.lmk.psi_scrit_complete_stall_ms=150
+ro.lmk.direct_reclaim_pressure=45
+ro.lmk.reclaim_scan_threshold=0
+ro.lmk.psi_partial_stall_ms=130
+ro.lmk.psi_complete_stall_ms=600
+ro.lmk.thrashing_limit=55
+ro.lmk.thrashing_limit_decay=37
+ro.lmk.swap_util_max=90
+ro.lmk.use_psi=true
