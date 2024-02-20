@@ -165,7 +165,8 @@ on early-boot
     write /sys/kernel/boot_slpi/boot 1
     write /sys/devices/virtual/cvp/cvp/boot 1
     exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qcom.early_boot.sh
-
+    setprop ro.sf.lcd_density ${vendor.display.lcd_density}
+    
     # SSR Setup
     write /sys/bus/msm_subsys/devices/subsys0/restart_level RELATED
     write /sys/bus/msm_subsys/devices/subsys1/restart_level RELATED
@@ -1268,9 +1269,6 @@ service poweroffhandler /system/vendor/bin/poweroffhandler
     disabled
     oneshot
 
-on property:vendor.display.lcd_density=*
-    setprop ro.sf.lcd_density ${vendor.display.lcd_density}
-    
 on property:persist.vendor.radio.multisim.config=dsds
     setprop persist.radio.multisim.config dsds
     setprop ro.telephony.default_network "22,22"
