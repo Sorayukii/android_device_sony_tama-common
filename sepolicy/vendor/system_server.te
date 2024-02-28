@@ -1,3 +1,5 @@
 allow system_server proc_stat:file { read };
 
 dontaudit system_server debugfs_wakeup_sources:file { read };
+
+get_prop(system_server, default_prop)
