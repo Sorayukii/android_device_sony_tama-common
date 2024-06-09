@@ -75,4 +75,16 @@
 
     <!-- Indicate the device support request channel on Wi-Fi Aware data-path. -->
     <bool translatable="false" name="config_wifiSupportChannelOnDataPath">true</bool>
+
+    <!-- Boolean indicating whether to disable firmware roaming when the device goes into idle mode.
+         true: firmware roaming will be disabled when the device goes into idle mode, and then
+               re-activated when the device exits idle mode.
+         false: firmware roaming will not be affected. -->
+    <bool translatable="false" name ="config_wifiDisableFirmwareRoamingInIdleMode">false</bool>
+
+    <!-- Boolean indicating whether the device should remain connected to a network without DHCP.
+        If true, the IpClient provisioning timeout will be set to infinite, which means that the
+        connection will not be torn down if the DHCP server does not respond. As a result the device
+        will be discoverable and reachable via the local-only IPv6 address. -->
+    <bool translatable="false" name ="config_wifiRemainConnectedAfterIpProvisionTimeout">true</bool>
 </resources>
