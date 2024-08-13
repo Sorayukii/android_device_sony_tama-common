@@ -45,6 +45,7 @@ BOARD_RAMDISK_OFFSET     := 0x01000000
 TARGET_KERNEL_SOURCE := kernel/sony/sdm845
 BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-r487747c
 
 BOARD_KERNEL_CMDLINE = androidboot.hardware=qcom
 BOARD_KERNEL_CMDLINE += video=vfb:640x400,bpp=32,memsize=3072000
