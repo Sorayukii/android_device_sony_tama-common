@@ -54,6 +54,16 @@ on early-init
     chown system graphics /sys/kernel/debug/sync/sw_sync
     chmod 0666 /sys/kernel/debug/sync/sw_sync
 
+    # Change ownership of fpc1145 related nodes
+    chown system input /sys/devices/platform/soc/soc:fpc1145/hw_reset
+    chown system input /sys/devices/platform/soc/soc:fpc1145/pinctl_set
+    chown system input /sys/devices/platform/soc/soc:fpc1145/regulator_enable
+    chown system input /sys/devices/platform/soc/soc:fpc1145/spi_prepare
+    chown system input /sys/devices/platform/soc/soc:fpc1145/irq
+    chown system input /sys/devices/platform/soc/soc:fpc1145/wakeup_enable
+    chown system input /sys/devices/platform/soc/soc:fpc1145/wake_lock
+    chown system input /sys/devices/platform/soc/soc:fpc1145/pm_wakeup
+
     chown root system /dev/kmsg
     chmod 0620 /dev/kmsg
 
