@@ -386,6 +386,12 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0.vendor \
     libsensorndkbridge
 
+# Quick Tap
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/quick_tap.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/quick_tap.xml
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.columbus.use_ap_sensor=false
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
