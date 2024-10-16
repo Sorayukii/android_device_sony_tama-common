@@ -106,8 +106,6 @@ on init
     # Bluetooth address setting
     setprop ro.vendor.bt.bdaddr_path "/data/vendor/etc/bluetooth_bdaddr"
 
-    write /proc/sys/vm/swappiness 100
-
 on late-init
     setprop vendor.keyprovd.suntory.prov "false"
 
@@ -267,8 +265,29 @@ on boot
     mkdir /mnt/vendor/persist/iar_db 0770 system system
     mkdir /mnt/vendor/spunvm 0770 system system
 
-    write /proc/sys/vm/dirty_ratio 5
-    write /proc/sys/vm/dirty_background_ratio 1
+    # Start non-blocking writeback later
+    write /proc/sys/vm/dirty_background_ratio 10
+
+    # Start blocking writeback later
+    write /proc/sys/vm/dirty_ratio 20
+
+    # Require dirty memory to stay in memory for longer
+    write /proc/sys/vm/dirty_expire_centisecs 3000
+
+    # Run the dirty memory flusher threads less often
+    write /proc/sys/vm/dirty_writeback_centisecs 3000
+
+    # Disable read-ahead for swap devices
+    write /proc/sys/vm/page-cluster 0
+
+    # Update /proc/stat less often to reduce jitter
+    write /proc/sys/vm/stat_interval 10
+
+    # Swap to the swap device at a fair rate
+    write /proc/sys/vm/swappiness 100
+
+    # Fairly prioritize page cache and file structures
+    write /proc/sys/vm/vfs_cache_pressure 100
 
     # Create WIGIG socket area
     mkdir /dev/socket/wigig 0770 wifi wifi
