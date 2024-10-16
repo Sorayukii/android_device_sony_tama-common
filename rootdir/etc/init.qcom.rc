@@ -255,6 +255,39 @@ on boot
     mkdir /mnt/vendor/persist/iar_db 0770 system system
     mkdir /mnt/vendor/spunvm 0770 system system
 
+    # Limit max perf event processing time to this much CPU usage
+    write /proc/sys/kernel/perf_cpu_time_max_percent 5
+
+    # Group tasks for less stutter but less throughput
+    write /proc/sys/kernel/sched_autogroup_enabled 1
+
+    # Execute child process before parent after fork
+    write /proc/sys/kernel/sched_child_runs_first 1
+
+    # Preliminary requirement for the following values
+    write /proc/sys/kernel/sched_tunable_scaling 0
+
+    # Reduce the maximum scheduling period for lower latency
+    write /proc/sys/kernel/sched_latency_ns 4000000
+
+    # Schedule this ratio of tasks in the guarenteed sched period
+    write /proc/sys/kernel/sched_min_granularity_ns 500000
+
+    # Require preeptive tasks to surpass half of a sched period in vmruntime
+    write /proc/sys/kernel/sched_wakeup_granularity_ns 2000000
+
+    # Reduce the frequency of task migrations
+    write /proc/sys/kernel/sched_migration_cost_ns 5000000
+
+    # Always allow sched boosting on top-app tasks
+    write /proc/sys/kernel/sched_min_task_util_for_colocation 0
+
+    # Improve real time latencies by reducing the scheduler migration time
+    write /proc/sys/kernel/sched_nr_migrate 32
+
+    # Disable scheduler statistics to reduce overhead
+    write /proc/sys/kernel/sched_schedstats 0
+    
     # Start non-blocking writeback later
     write /proc/sys/vm/dirty_background_ratio 10
 
