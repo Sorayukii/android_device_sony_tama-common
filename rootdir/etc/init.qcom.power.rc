@@ -99,6 +99,16 @@ on boot
     # Disable console_suspend to get better logging for kernel crashes
     write /sys/module/printk/parameters/console_suspend N
 
+    # I/O scheduler read ahead
+    write /sys/block/mmcblk0/queue/read_ahead_kb 1024
+    write /sys/block/mmcblk0/queue/nr_requests 128
+    write /sys/block/sda/queue/read_ahead_kb 1024
+    write /sys/block/sda/queue/nr_requests 128
+    write /sys/block/sdb/queue/read_ahead_kb 1024
+    write /sys/block/sdb/queue/nr_requests 128
+    write /sys/block/sdc/queue/read_ahead_kb 1024
+    write /sys/block/sdc/queue/nr_requests 128
+
 on post-fs
     # Disable sched autogroup
     write /proc/sys/kernel/sched_autogroup_enabled 0
