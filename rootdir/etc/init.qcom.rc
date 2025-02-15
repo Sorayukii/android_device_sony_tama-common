@@ -257,9 +257,6 @@ on boot
     mkdir /mnt/vendor/persist/iar_db 0770 system system
     mkdir /mnt/vendor/spunvm 0770 system system
 
-    write /proc/sys/vm/dirty_ratio 5
-    write /proc/sys/vm/dirty_background_ratio 1
-
     # Create WIGIG socket area
     mkdir /dev/socket/wigig 0770 wifi wifi
 
