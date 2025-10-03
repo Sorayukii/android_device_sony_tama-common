@@ -1,3 +1,7 @@
+# web browser crashes
+allow system_server webview_zygote:process setsched;
+allow system_server app_zygote:process setsched;
+
 # allow system app to access zram sysfs nodes
 allow system_app sysfs_zram:dir search;
 allow system_app sysfs_zram:file r_file_perms;
