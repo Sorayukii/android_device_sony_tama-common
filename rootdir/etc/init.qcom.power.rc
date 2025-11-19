@@ -213,10 +213,12 @@ on enable-low-power
     write /sys/class/devfreq/soc:qcom,mincpubw/polling_interval 10
 
     # Set cpuset parameters
-    write /dev/cpuset/background/cpus 0-1
+    write /dev/cpuset/background/cpus 0-3
     write /dev/cpuset/system-background/cpus 0-3
-    write /dev/cpuset/foreground/boost/cpus 0-3,6-7
-    write /dev/cpuset/foreground/cpus 0-3,6-7
+    write /dev/cpuset/audio-app/cpus 0-3
+    write /dev/cpuset/camera-daemon/cpus 0-3
+    write /dev/cpuset/foreground/boost/cpus 0-7
+    write /dev/cpuset/foreground/cpus 0-7
     write /dev/cpuset/top-app/cpus 0-7
     write /dev/cpuset/restricted/cpus 0-3
 
