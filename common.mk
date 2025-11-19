@@ -185,8 +185,7 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     qns.fstab \
     sensor_json_transfer.sh \
-    ueventd.qcom.rc \
-    ueventd.tama.rc
+    ueventd.qcom.rc
 
 # Display
 PRODUCT_PACKAGES += \
