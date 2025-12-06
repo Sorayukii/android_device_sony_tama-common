@@ -1,0 +1,3 @@
+allow system_server webview_zygote:process setsched;
+allow system_server app_zygote:process setsched;
+
