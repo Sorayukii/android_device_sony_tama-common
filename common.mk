@@ -340,8 +340,8 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.3-service.sony_sdm845-libperfmgr \
-    android.hardware.power@1.3.vendor
+    android.hardware.power-service.sony-libperfmgr \
+    android.hardware.power@1.2.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
@@ -386,7 +386,8 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/google/pixel
+    hardware/google/interfaces \
+    hardware/google/pixel \
 
 # Telephony
 PRODUCT_PACKAGES += \
