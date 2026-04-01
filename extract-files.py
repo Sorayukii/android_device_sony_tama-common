@@ -60,8 +60,6 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
-    'system_ext/bin/wfdservice': blob_fixup()
-        .add_needed('libwfdservice_shim.so'),
     (
         'system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml',
         'system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml',
@@ -70,15 +68,8 @@ blob_fixups: blob_fixups_user_type = {
         'system_ext/etc/permissions/telephonyservice.xml'
     ): blob_fixup()
         .regex_replace('/product/framework/', '/system_ext/framework/'),
-    'system_ext/lib/libwfdmmsrc_system.so': blob_fixup()
-        .add_needed('libgui_shim.so'),
-    'system_ext/lib/libwfdservice.so': blob_fixup()
-        .replace_needed('android.media.audio.common.types-V2-cpp.so', 'android.media.audio.common.types-V4-cpp.so'),
     ('system_ext/lib/lib-imsvideocodec.so', 'system_ext/lib64/lib-imsvideocodec.so'): blob_fixup()
         .add_needed('libgui_shim.so'),
-    'system_ext/lib64/libwfdnative.so': blob_fixup()
-        .add_needed('libbinder_shim.so')
-        .add_needed('libinput_shim.so'),
     'vendor/bin/hw/android.hardware.drm@1.1-service.widevine': blob_fixup()
         .replace_needed('libhidltransport.so', 'libhidlbase.so')
         .remove_needed('libhwbinder.so'),
