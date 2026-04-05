@@ -120,8 +120,17 @@ drm.service.enabled=true
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 # Graphics
+debug.hwui.skia_atrace_enabled=false
+debug.hwui.target_cpu_time_percent=30
+debug.hwui.use_hint_manager=true
 debug.egl.hw=0
 debug.sf.hw=0
+debug.sf.enable_gl_backpressure=0
+debug.sf.disable_client_composition_cache=1
+debug.sf.enable_transaction_tracing=false
+debug.sf.predict_hwc_composition_strategy=0
+debug.sf.recomputecrop=0
+debug.sf.enable_egl_image_tracker=0
 ro.hardware.egl=adreno
 ro.hardware.vulkan=sdm845
 ro.opengles.version=196610
