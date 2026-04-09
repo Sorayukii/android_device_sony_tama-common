@@ -102,6 +102,9 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 # HWUI
 HWUI_COMPILE_FOR_PERF := true
 
+# Disable Postrender Cleanup
+TARGET_DISABLE_POSTRENDER_CLEANUP := true
+
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(COMMON_PATH)/framework_compatibility_matrix.xml \
