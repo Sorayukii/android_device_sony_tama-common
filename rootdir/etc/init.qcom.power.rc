@@ -204,9 +204,7 @@ on enable-low-power
     write /sys/class/devfreq/soc:qcom,l3-cdsp/governor "userspace"
     chown system /sys/class/devfreq/soc:qcom,l3-cdsp/userspace/set_freq
 
-    # Gold L3 ratio ceil
-    write /sys/class/devfreq/soc:qcom,l3-cpu4/mem_latency/ratio_ceil 4000
-
+    # Enable compute governor for mincpubw
     write /sys/class/devfreq/soc:qcom,mincpubw/governor "compute"
     write /sys/class/devfreq/soc:qcom,mincpubw/polling_interval 10
 
