@@ -48,3 +48,6 @@ persist.sys.wfd.virtual=0
 
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
+
+# Incremental FS
+ro.incremental.enable=true
