@@ -1,3 +1,9 @@
+# ART
+dalvik.vm.dex2oat64.enabled=true
+dalvik.vm.dex2oat-threads=8
+dalvik.vm.boot-dex2oat-threads=8
+dalvik.vm.image-dex2oat-threads=8
+
 # Audio
 audio.deep_buffer.media=true
 audio.offload.min.duration.secs=30
