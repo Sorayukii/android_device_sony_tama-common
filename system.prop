@@ -51,3 +51,6 @@ persist.sys.fuse.passthrough.enable=true
 
 # Incremental FS
 ro.incremental.enable=true
+
+# eBPF
+ro.bpf.kver_override=5.4.186
